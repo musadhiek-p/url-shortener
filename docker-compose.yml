@@ -1,0 +1,8 @@
+version: "3.8"
+
+services:
+  shortener:
+    build: .
+    ports: 
+      - "50051:50051"
+    restart: always

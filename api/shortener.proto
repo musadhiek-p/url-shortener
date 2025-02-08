@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+package shortener;
+option go_package= "github.com/musadhiek-p/url-shortener/api";
+
+service ShortenerService{
+    rpc shortenURL (ShortenRequest) returns (ShortenResponse);
+    rpc ResolveURL (ResolveRequest) returns (ResolveResponse);
+}
+
+message ShortenRequest{
+    string long_url =1;
+    string user_id =2;
+}
+
+message ShortenResponse{
+    string short_url = 1;
+}
+message ResolveRequest{
+    string short_url =1;
+}
+
+message ResolveResponse {
+    string long_url =1 ;
+}
