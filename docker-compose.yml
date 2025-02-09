@@ -5,4 +5,4 @@ services:
     build: .
     ports: 
       - "50051:50051"
-    restart: always
+    restart: always  
